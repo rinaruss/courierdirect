@@ -1,0 +1,404 @@
+/* Reset & Base */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+html { font-family: 'Inter', sans-serif; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Utility Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+.btn:hover { opacity: 0.8; }
+.btn-primary {
+  background-color: #ff4422;
+  color: white;
+}
+.btn-secondary {
+  background-color: white;
+  color: #ff4422;
+  border: 2px solid #ff4422;
+}
+
+/* Header / Nav */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+.logo-img {
+  height: 80px; /* try 30px if it's still too big */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.main-nav a { color: #444; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(
+  to right,
+  rgba(0,115,230,1) 0%,
+  rgba(0,115,230,0) 75%
+);
+  color: white;
+  padding: 4em 0;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-copy {
+  max-width: 45%;
+}
+.hero-copy h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.hero-copy p {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  /* Apply a mask so the left side fades out */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+  mask-mode: alpha;
+
+  /* For Safari / WebKit browsers */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+  -webkit-mask-mode: alpha;
+
+}
+
+/* Trusted */
+.trusted {
+  padding: 3em 0;
+  text-align: center;
+}
+.trusted h2 {
+  font-size: 2em;
+  color: #555;
+}
+
+/* About / Features */
+.about {
+  padding: 3em 0;
+}
+.about-inner {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+.about-text {
+  flex: 1;
+  color: #444;
+  font-size: 1em;
+  line-height: 1.6;
+}
+.about-text p + p {
+  margin-top: 1.5em;
+}
+.about-text a {
+  color: #0072ce;
+  font-weight: 500;
+}
+.about-image img {
+  max-width: 500px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;  /* pushes the image down */
+}
+
+/* section wrapper */
+#industries {
+  position: relative;
+  background: url('cityscape.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* dark overlay over the bg */
+#industries .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  pointer-events: none;
+}
+
+/* inner content sits above overlay */
+#industries .inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+/* heading + subtitle */
+#industries h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0076EB;
+  text-transform: uppercase;
+}
+#industries p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* grid of cards */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* each card */
+.industry-grid .card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+.industry-grid .card i {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.industry-grid .card h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.industry-grid .card:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+}
+
+/* responsive tweaks */
+@media (max-width: 600px) {
+  #industries {
+    padding: 60px 10px;
+  }
+  #industries h2 {
+    font-size: 2rem;
+  }
+}
+
+/* services section */
+#services {
+  background: #fff;
+  color: #333;
+  padding: 80px 20px;
+}
+#services .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* heading */
+#services h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #0076EB;
+  margin-bottom: 0.5rem;
+}
+#services .subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+#services .intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* grid of service cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* each card */
+.service-grid .card {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-grid .card i {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+.service-grid .card h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.service-grid .card .learn-more {
+  display: inline-block;
+  text-decoration: none;
+  color: #0076EB;
+  font-weight: 500;
+}
+.service-grid .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  #services {
+    padding: 60px 10px;
+  }
+  #services h2 {
+    font-size: 2rem;
+  }
+}
+
+/* final CTA */
+#get-started {
+  position: relative;
+  background: url('cityscape.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+#get-started .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+#get-started .inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#get-started h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* button group */
+.cta-buttons {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#get-started .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #0076EB;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+#get-started .btn:hover {
+  background: #c32e3f;
+  transform: translateY(-3px);
+}
+
+/* stack on mobile */
+@media (max-width: 600px) {
+  #get-started {
+    padding: 70px 10px;
+  }
+  #get-started h2 {
+    font-size: 2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  #get-started .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.scroll-text {
+  position: fixed;               /* stays in place during scroll */
+  left: 10px;                    /* distance from the left edge */
+  top: -200px;                   /* start above the viewport */
+  writing-mode: vertical-rl;     /* stack letters top→bottom */
+  text-orientation: upright;     /* keep characters upright */
+  font-size: 2.5rem;             /* adjust as needed */
+  font-weight: bold;
+  color: rgba(255,255,255,0.2);  /* subtle/translucent */
+  pointer-events: none;          /* clicks pass through */
+  z-index: 1000;                 /* on top of everything */
+  animation: scrollDown 8s linear infinite;
+}
+
+@keyframes scrollDown {
+  0%   { top: -200px; }                                /* off top */
+  100% { top: calc(100vh + 200px); }                   /* off bottom */
+}
+
+
+/* Footer */
+.site-footer {
+  background: #f8f8f8;
+  padding: 2em 0;
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+}
