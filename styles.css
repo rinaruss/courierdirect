@@ -44,7 +44,7 @@ a { text-decoration: none; color: inherit; }
   padding: 1em 0;
 }
 .logo-img {
-  height: 80px; /* try 30px if it's still too big */
+  height: 120px; /* try 30px if it's still too big */
   width: auto;
   object-fit: contain;
   display: block;
@@ -122,6 +122,23 @@ a { text-decoration: none; color: inherit; }
 /* About / Features */
 .about {
   padding: 3em 0;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('bglogo.png'); /* Apply the background image */
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 500px auto; /* Adjust the size of the logo */
+  opacity: 0.1; /* Apply slight transparency */
+  pointer-events: none; /* Prevent interaction with the pseudo-element */
+  z-index: -1; /* Place it behind the content */
 }
 .about-inner {
   display: flex;
@@ -146,13 +163,27 @@ a { text-decoration: none; color: inherit; }
   border-radius: 8px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;  /* pushes the image down */
+  /*margin-top: 1rem;  pushes the image down */
+}
+.about-text-bg {
+  flex: 1;
+  position: relative;
+  /*background-color: #fff; Optional: keeps text readable */
+  padding: 1em;
+  overflow: hidden;
+}
+
+
+
+.about-text {
+  position: relative;
+  z-index: 1;
 }
 
 /* section wrapper */
 #industries {
   position: relative;
-  background: url('cityscape.jpg') center/cover no-repeat;
+  background: url('maryland.jpg') center/cover no-repeat;
   color: #fff;
   padding: 80px 20px;
   overflow: hidden;
@@ -179,7 +210,7 @@ a { text-decoration: none; color: inherit; }
 #industries h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #0076EB;
+  color: #fff;
   text-transform: uppercase;
 }
 #industries p {
@@ -193,11 +224,14 @@ a { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
+  justify-content: center; /* This centers the grid items horizontally */
+  max-width: 1000px;        /* Optional: limit the max width of the grid */
+  margin: 0 auto;           /* Center the grid container itself */
 }
 
 /* each card */
 .industry-grid .card {
-  background: rgba(255,255,255,0.05);
+  background: #0076EB;
   padding: 30px 20px;
   text-align: center;
   border-radius: 8px;
@@ -272,7 +306,7 @@ a { text-decoration: none; color: inherit; }
   background: #fafafa;
   border-radius: 8px;
   padding: 40px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .service-grid .card i {
@@ -341,6 +375,7 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
   justify-content: center;
 }
+
 #get-started .btn {
   display: inline-block;
   padding: 1rem 2rem;
@@ -352,8 +387,9 @@ a { text-decoration: none; color: inherit; }
   border-radius: 6px;
   transition: background 0.3s, transform 0.3s;
 }
+
 #get-started .btn:hover {
-  background: #c32e3f;
+  background: rgba(255,255,255,0.15);
   transform: translateY(-3px);
 }
 
@@ -374,24 +410,46 @@ a { text-decoration: none; color: inherit; }
   }
 }
 
-.scroll-text {
-  position: fixed;               /* stays in place during scroll */
-  left: 10px;                    /* distance from the left edge */
-  top: -200px;                   /* start above the viewport */
-  writing-mode: vertical-rl;     /* stack letters top→bottom */
-  text-orientation: upright;     /* keep characters upright */
-  font-size: 2.5rem;             /* adjust as needed */
-  font-weight: bold;
-  color: rgba(255,255,255,0.2);  /* subtle/translucent */
-  pointer-events: none;          /* clicks pass through */
-  z-index: 1000;                 /* on top of everything */
-  animation: scrollDown 8s linear infinite;
+.scrolling-container {
+  position: fixed;
+  bottom: -20px; /* Fix at the bottom */
+  left: 0;
+  width: 100%;
+  height: 100px; /* Set a height for the container */
+  overflow: hidden; /* Hide overflow to only show elements inside the container */
+  z-index: 1000;
 }
 
-@keyframes scrollDown {
-  0%   { top: -200px; }                                /* off top */
-  100% { top: calc(100vh + 200px); }                   /* off bottom */
+.scrolling-content {
+  display: flex;
+  align-items: center;
+  animation: scrollAcross 10s linear infinite; /* Animation for the scrolling effect */
 }
+
+.scrolling-image {
+  width: 150px; /* Adjust image size */
+  opacity: 0.7;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.scrolling-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0076EB;
+  white-space: nowrap; /* Prevent text from breaking into new lines */
+  opacity: 0.7;
+}
+
+@keyframes scrollAcross {
+  0% {
+    transform: translateX(-100%); /* Start from the right side off-screen */
+  }
+  100% {
+    transform: translateX(100%); /* Move to the left side off-screen */
+  }
+}
+
+
 
 
 /* Footer */
