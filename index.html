@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
+
  <!-- NAVBAR -->
 <header class="site-header">
   <div class="container">
@@ -16,10 +17,8 @@
     </a>
     <nav class="main-nav">
       <ul>
-        <li><a href="#">HOME ▾</a></li>
-        <li><a href="#">SERVICES ▾</a></li>
         <li><a href="#" class="btn btn-primary">Driver Opportunities</a></li>
-	<li><a href="#" class="btn btn-primary">Contact</a></li>
+	<li><a href="mailto:contact@courierdirectservices.com" class="btn btn-primary">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -32,7 +31,7 @@
       <div class="hero-copy">
         <h1>Local Package Delivery<br>You Can Trust</h1>
 	<p>On-demand, local and long-distance service from your dedicated Courier Direct team.</p>
-        <a href="#" class="btn btn-secondary">Free Estimate</a>
+        <!--<a href="#" class="btn btn-secondary">Free Estimate</a>-->
       </div>
       <div class="hero-image">
         <img src="hero-van.jpg" alt="GoShare delivery van">
@@ -41,31 +40,73 @@
   </section>
 
   <!-- TRUSTED SECTION -->
-  <section class="trusted">
-    <div class="container">
-      <h2>Fast and Efficient Delivery for Everyday Small Packages</h2>
+<section class="trusted">
+  <div class="container">
+    <div class="moving-group">
+      <h2 class="moving-text">• Timely • Efficient • Safe Delivery</h2>
+      <img src="bglogo.png" alt="Foreground Image" class="foreground-image" />
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FEATURES / ABOUT -->
   <section class="about">
     <div class="container about-inner">
       <div class="about-text">
-        <p>Courier Direct connects you with trusted local Delivery Professionals for fast and reliable transport of medical supplies, small car parts, and essential small packages. Whether you're a medical provider, auto shop, or individual in need of urgent delivery, our team is just a few clicks away. With Courier Direct, you can schedule same-day or future deliveries directly through our user-friendly website. We pride ourselves on offering personal service with professional care, ensuring your items arrive safely and on time.</p>
+        <p>Courier Direct specializes in the rapid, secure transport of mission-critical items—serving enterprise clients across industries. Whether it’s high-value medical equipment, essential automotive components, or other time-sensitive materials, we’re built to meet the complex logistics demands of hospitals, manufacturers, and large-scale operations. We don’t just deliver fast—we deliver with precision, accountability, and excellence at scale.</p>
+     </div>
+    <div class="about-image">
+   <img src="van.jpg" alt="Delivery professional unloading boxes">
+   </div>
+  </div>
+ </section>
 
-<p>Courier Direct serves both businesses and individuals, offering tailored solutions that match the pace of modern logistics needs. Whether you're delivering within the city or coordinating multiple stops, we make it simple to track deliveries, communicate with drivers, and save time through automated updates. Let Courier Direct be your go-to delivery partner for everything from healthcare needs to automotive essentials.</p>
-      </div>
-      <div class="about-image">
-        <img src="about-delivery.jpg" alt="Delivery professional unloading boxes">
-      </div>
-    </div>
-  </section>
+ <!-- FEATURES / ABOUT -->
+ <section class="about2">
+<div class="scrolling-container">
+  <div class="scrolling-content">
+    <span class="scrolling-text">We bring it DIRECT to you!</span>
+  </div>
+</div>
+</section>
+
+<script>
+  function handleScroll() {
+    const element = document.querySelector('.scrolling-content');
+    const rect = element.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight * 0.8;
+    if (isVisible) {
+      element.classList.add('visible');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+</script>
+
+  <section class="about2">
+    <div class="container about2-inner">
+<div class="about-image">
+  <img src="about-delivery.jpg" alt="Delivery professional unloading boxes">
+</div>
+<div class="about-text">
+  <p>Safety is at the core of every delivery. We understand that our clients move more than just packages. Courier Direct implements strict handling procedures, secure chain-of-custody tracking, and fully insured transport for all deliveries. Our drivers are trained to meet industry-specific compliance standards, and our system provides complete visibility from dispatch to drop-off. When the stakes are high, safety isn’t a nice-to-have—it’s our promise.</p>
+</div>
+  </div>
+ </section>
+
+
 
 <section id="industries">
-  <div class="overlay"></div>
-  <div class="inner">
+   <div class="inner">
     <h2>What We Serve</h2>
-    <p>Learn about the industries we serve</p>
+    <p class="subtitle">
+      Express delivery service in Maryland
+    </p>
+    <p class="intro">
+      Courier Direct offers fast, reliable delivery services across Maryland, tailored to meet your needs. With a focus on speed, security, and customer satisfaction, we ensure your deliveries arrive on time, every time.
+    </p>
     <div class="industry-grid">
       <div class="card">
         <i class="fas fa-vial"></i>
@@ -98,7 +139,7 @@
       Express delivery service in Maryland
     </p>
     <p class="intro">
-      In order to provide you with the best delivery experience possible, Courier Direct offers a variety of helpful services. We make sure you and your customers are completely satisfied. Explore our services below and learn why Courier Direct is the right choice for your next delivery!
+      In order to provide you with the best delivery experience possible, Courier Direct offers a variety of helpful services. We make sure you and your customers are completely satisfied.
     </p>
 
     <div class="service-grid">
@@ -126,19 +167,13 @@
   <div class="inner">
     <h2>Let's Get Started.</h2>
     <div class="cta-buttons">
-      <a href="/contact" class="btn">Contact Us</a>
+      <a href="mailto:contact@courierdirectservices.com" class="btn">Contact Us</a>
       <a href="/careers" class="btn">Driver Opportunities</a>
     </div>
   </div>
 </section>
 
-<div class="scrolling-container">
-  <div class="scrolling-content">
-    <span class="scrolling-text">Efficient Delivery</span>
-    <img src="bglogo.png" alt="Moving Image" class="scrolling-image">
-    
-  </div>
-</div>
+
 
 
 
@@ -148,11 +183,10 @@
   <h2 style="margin-bottom: 10px; letter-spacing: 1px;">COURIER DIRECT</h2>
   <nav style="margin-bottom: 20px;">
     <a href="#" style="margin: 0 10px; color: #fff; text-decoration: none; font-weight: bold;">HOME</a>
-    <a href="#" style="margin: 0 10px; color: #fff; text-decoration: none; font-weight: bold;">CONTACT</a>
   </nav>
   <div style="margin-bottom: 20px;">
-    <a href="mailto:rina@courierdirectservices.com" style="color: #fff; text-decoration: none;">rina@courierdirectservices.com</a><br>
-    <span>443-227-5006</span>
+    <a href="mailto:rina@courierdirectservices.com" style="color: #fff; text-decoration: none;">contact@courierdirectservices.com</a><br>
+    <span>301-529-3668</span>
 </footer>
 
 
