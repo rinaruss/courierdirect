@@ -172,7 +172,10 @@ a { text-decoration: none; color: inherit; }
     Fill out the form below, and we'll reach out if there's a fit.
   </p>
 
-  <form action="send_form.php" method="post">
+  <form action="https://api.web3forms.com/submit" method="post">
+
+    <input type="hidden" name="access_key" value="0ee9aeb3-fc99-4317-9dc6-18552837beed">
+
     <label for="name">Name *</label>
     <input type="text" id="name" name="name" required>
 
