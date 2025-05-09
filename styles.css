@@ -469,6 +469,50 @@ a { text-decoration: none; color: inherit; }
   }
 }
 
+.equipment-section {
+  background: url('your-background.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.equipment-section h2 {
+  color: #0076EB; /* red */
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.equipment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.equipment-item {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.equipment-item img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.equipment-item p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+
 /* final CTA */
 #get-started {
   position: relative;

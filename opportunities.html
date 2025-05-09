@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+
+/* Reset & Base */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+html { font-family: 'Inter', sans-serif; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Utility Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  margin-top: 40px;
+
+}
+.btn:hover { opacity: 0.8; }
+.btn-primary {
+  background-color: #0076EB;
+  color: white;
+}
+.btn-secondary {
+  background-color: white;
+  color: #ff4422;
+  border: 2px solid #ff4422;
+
+}
+
+/* Header / Nav */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  max-height: 250px; /* Prevent navbar from growing beyond this height */
+  padding: 0; /* Optional: removes extra padding if needed */
+}
+
+.site-header .container {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: space-between;
+  padding: 0.5em 0; /* Adjust this to control vertical space */
+}
+
+.logo-img {
+  height: 300px; /* Larger logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: -30px; /* Moves the logo upwards */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.main-nav a {
+  color: white;
+}
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0076EB;
+      margin-top: 40px;
+    }
+
+    p.description {
+      max-width: 600px;
+      margin: 10px auto 30px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .checkbox-container {
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    button {
+      background-color: #0076EB;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 80px
+    }
+
+    button:hover { opacity: 0.8; }
+
+  </style>
+</head>
+<body>
+
+ <!-- NAVBAR -->
+<header class="site-header">
+  <div class="container">
+    <a href="#">
+      <img src="Original Logo.png" alt="Courier Direct Logo" class="logo-img">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="btn btn-primary">Home</a></li>
+	<li><a href="mailto:contact@courierdirectservices.com" class="btn btn-primary">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <h2>CONTACT US</h2>
+  <p class="description">
+    Are you interested in setting your own hours while upholding a high standard for deliveries? Join us as an independent contract driver!
+    Fill out the form below, and we'll reach out if there's a fit.
+  </p>
+
+  <form action="send_form.php" method="post">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email address *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone number *</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+
+    <label for="make">Vehicle make</label>
+    <input type="text" id="make" name="make">
+
+    <label for="model">Vehicle model</label>
+    <input type="text" id="model" name="model">
+
+    <label for="year">Vehicle year</label>
+    <input type="text" id="year" name="year">
+
+    <label for="hours">Available Hours? *</label>
+    <select id="hours" name="hours" required>
+      <option value="">Please select available hours</option>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+      <option value="weekends">Weekends</option>
+    </select>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="contract" name="contract" required>
+      <label for="contract">By checking this box, you acknowledge you are submitting as an Independent Contract Driver.</label>
+    </div>
+
+    <label for="info">Additional information</label>
+    <textarea id="info" name="info" placeholder="Please enter any additional information..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+
+
+<footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto;">
+    
+    <!-- Left Image -->
+    <img src="Original Logo.png" alt="Left Logo" style="height: 120px;" />
+
+    <!-- Center Content -->
+    <div style="text-align: center; flex: 1; margin-left: -150px;">
+      <nav style="margin-bottom: 20px;">
+        <a href="#" style="margin: 0 10px; color: #fff; text-decoration: none; font-weight: bold;">HOME</a>
+      </nav>
+      <div style="margin-bottom: 20px;">
+        <p style="margin: 0;">1451 Rockville Pike, Suite 250, Rockville, MD 20852</p>
+        <a href="mailto:contact@courierdirectservices.com" style="color: #fff; text-decoration: none;">contact@courierdirectservices.com</a><br>
+        <span>301-529-3668</span>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <img src="imct.jpg" alt="Left Logo" style="height: 80px;" />
+
+  </div>
+</footer>
+
+</html>
