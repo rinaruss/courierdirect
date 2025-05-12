@@ -159,7 +159,7 @@ a { text-decoration: none; color: inherit; }
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="btn btn-primary">Home</a></li>
-	<li><a href="mailto:contact@courierdirectservices.com" class="btn btn-primary">Contact</a></li>
+	<li><a href="#contact" class="btn btn-primary">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -174,7 +174,7 @@ a { text-decoration: none; color: inherit; }
 
   <form action="https://api.web3forms.com/submit" method="post">
 
-    <input type="hidden" name="access_key" value="0ee9aeb3-fc99-4317-9dc6-18552837beed">
+    <input type="hidden" name="access_key" value="99276259-d4de-48fd-a2d8-2f11a15c984e">
 
     <label for="name">Name *</label>
     <input type="text" id="name" name="name" required>
@@ -197,13 +197,16 @@ a { text-decoration: none; color: inherit; }
     <label for="year">Vehicle year</label>
     <input type="text" id="year" name="year">
 
-    <label for="hours">Available Hours? *</label>
+    <label for="hours">Select Availability? *</label>
     <select id="hours" name="hours" required>
-      <option value="">Please select available hours</option>
-      <option value="morning">Morning</option>
-      <option value="afternoon">Afternoon</option>
-      <option value="evening">Evening</option>
-      <option value="weekends">Weekends</option>
+      <option value="">Please select available </option>
+      <option value="mffull">M-F Full</option>
+      <option value="mfam">M-F AM</option>
+      <option value="mfpm">M-F PM</option>
+      <option value="weekendfull">Weekends Full</option>
+      <option value="weekendam">Weekends AM</option>
+      <option value="weekendpm">Weekends PM</option>
+      <option value="Alloftheabove">All of the above</option>
     </select>
 
     <div class="checkbox-container">
@@ -220,7 +223,7 @@ a { text-decoration: none; color: inherit; }
 </body>
 
 
-<footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+<footer id="contact" footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
   <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto;">
     
     <!-- Left Image -->
