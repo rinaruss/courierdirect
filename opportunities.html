@@ -5,78 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us</title>
   <style>
+    /* Reset & Base */
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    html { font-family: 'Inter', sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
 
-/* Reset & Base */
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-}
-html { font-family: 'Inter', sans-serif; line-height: 1.6; }
-a { text-decoration: none; color: inherit; }
+    /* Utility Containers */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Utility Containers */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      font-weight: 500;
+      padding: 0.75em 1.5em;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+      margin-top: 40px;
+    }
+    .btn:hover { opacity: 0.8; }
+    .btn-primary {
+      background-color: #0076EB;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: white;
+      color: #ff4422;
+      border: 2px solid #ff4422;
+    }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  font-weight: 500;
-  padding: 0.75em 1.5em;
-  border-radius: 4px;
-  transition: opacity 0.2s;
-  margin-top: 40px;
-
-}
-.btn:hover { opacity: 0.8; }
-.btn-primary {
-  background-color: #0076EB;
-  color: white;
-}
-.btn-secondary {
-  background-color: white;
-  color: #ff4422;
-  border: 2px solid #ff4422;
-
-}
-
-/* Header / Nav */
-.site-header {
-  background: white;
-  border-bottom: 1px solid #eee;
-  max-height: 250px; /* Prevent navbar from growing beyond this height */
-  padding: 0; /* Optional: removes extra padding if needed */
-}
-
-.site-header .container {
-  display: flex;
-  align-items: flex-start; /* Aligns items to the top */
-  justify-content: space-between;
-  padding: 0.5em 0; /* Adjust this to control vertical space */
-}
-
-.logo-img {
-  height: 300px; /* Larger logo */
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin-top: -30px; /* Moves the logo upwards */
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-
-.main-nav a {
-  color: white;
-}
-
+    /* Header / Nav */
+    .site-header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      max-height: 250px;
+      padding: 0;
+    }
+    .site-header .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0.5em 0;
+    }
+    .logo-img {
+      height: 300px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin-top: -30px;
+    }
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      align-items: center;
+    }
+    .main-nav a {
+      color: white;
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -99,58 +91,17 @@ a { text-decoration: none; color: inherit; }
       color: #666;
     }
 
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea {
+    iframe {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    textarea {
-      resize: vertical;
-      height: 100px;
-    }
-
-    .checkbox-container {
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
-
-    button {
-      background-color: #0076EB;
-      color: white;
-      padding: 12px 20px;
+      height: 1250px;
       border: none;
-      width: 100%;
-      font-size: 16px;
-      cursor: pointer;
-      margin-bottom: 80px
     }
-
-    button:hover { opacity: 0.8; }
 
   </style>
 </head>
 <body>
 
- <!-- NAVBAR -->
+<!-- NAVBAR -->
 <header class="site-header">
   <div class="container">
     <a href="#">
@@ -159,71 +110,40 @@ a { text-decoration: none; color: inherit; }
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="btn btn-primary">Home</a></li>
-	<li><a href="#contact" class="btn btn-primary">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<h2>CONTACT US</h2>
+<p class="description">
+  Are you interested in setting your own hours while upholding a high standard for deliveries? Join us as an independent contract driver!
+  Fill out the form below, and we'll reach out if there's a fit.
+</p>
 
-  <h2>CONTACT US</h2>
-  <p class="description">
-    Are you interested in setting your own hours while upholding a high standard for deliveries? Join us as an independent contract driver!
-    Fill out the form below, and we'll reach out if there's a fit.
-  </p>
+<!-- Embedded LeadConnector Form -->
+<iframe
+  src="https://api.leadconnectorhq.com/widget/form/j864zBpOQW32EySiKbga"
+  style="width:100%;height:100%;border:none;border-radius:0px"
+  id="inline-j864zBpOQW32EySiKbga" 
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Driver Opportunities"
+  data-height="1252"
+  data-layout-iframe-id="inline-j864zBpOQW32EySiKbga"
+  data-form-id="j864zBpOQW32EySiKbga"
+  title="Driver Opportunities">
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
-  <form action="https://api.web3forms.com/submit" method="post">
-
-    <input type="hidden" name="access_key" value="99276259-d4de-48fd-a2d8-2f11a15c984e">
-
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email address *</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="phone">Phone number *</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address">
-
-    <label for="make">Vehicle make</label>
-    <input type="text" id="make" name="make">
-
-    <label for="model">Vehicle model</label>
-    <input type="text" id="model" name="model">
-
-    <label for="year">Vehicle year</label>
-    <input type="text" id="year" name="year">
-
-    <label for="hours">Select Availability? *</label>
-    <select id="hours" name="hours" required>
-      <option value="">Please select available </option>
-      <option value="mffull">M-F Full</option>
-      <option value="mfam">M-F AM</option>
-      <option value="mfpm">M-F PM</option>
-      <option value="weekendfull">Weekends Full</option>
-      <option value="weekendam">Weekends AM</option>
-      <option value="weekendpm">Weekends PM</option>
-      <option value="Alloftheabove">All of the above</option>
-    </select>
-
-    <div class="checkbox-container">
-      <input type="checkbox" id="contract" name="contract" required>
-      <label for="contract">By checking this box, you acknowledge you are submitting as an Independent Contract Driver.</label>
-    </div>
-
-    <label for="info">Additional information</label>
-    <textarea id="info" name="info" placeholder="Please enter any additional information..."></textarea>
-
-    <button type="submit">Submit</button>
-  </form>
-
-</body>
-
-
-<footer id="contact" footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+<!-- FOOTER -->
+<footer id="contact" style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
   <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto;">
     
     <!-- Left Image -->
@@ -242,9 +162,10 @@ a { text-decoration: none; color: inherit; }
     </div>
 
     <!-- Right Image -->
-    <img src="imct.jpg" alt="Left Logo" style="height: 80px;" />
+    <img src="imct.jpg" alt="Right Logo" style="height: 80px;" />
 
   </div>
 </footer>
 
+</body>
 </html>
